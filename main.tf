@@ -7,15 +7,15 @@ locals {
 }
 
 module "name" {
-  source = "git::https://github.com/s3d-club/terraform-external-data-name-tags?ref=v0.1.0"
+  source = "github.com/s3d-club/terraform-external-name?ref=v0.1.1"
 
-  name_prefix = var.name_prefix
-  path        = path.module
-  tags        = var.tags
+  context = var.name_prefix
+  path    = path.module
+  tags    = var.tags
 }
 
 resource "aws_eks_cluster" "this" {
-  name     = module.name.name_prefix
+  name     = module.name.prefix
   role_arn = aws_iam_role.this.arn
   version  = var.cluster_version
   tags     = module.name.tags
@@ -28,7 +28,7 @@ resource "aws_eks_cluster" "this" {
 }
 
 resource "aws_iam_role" "this" {
-  name = module.name.name_prefix
+  name = module.name.prefix
   tags = module.name.tags
 
   assume_role_policy = jsonencode({
