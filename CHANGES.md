@@ -9,3 +9,9 @@ Recently completed and planned work is tracked here.
 - Updated `README.md`
 - Upgraded `name` module
 - Upgraded `hashicorp/aws` provider
+
+## [0.1.2](.)
+- Added `kms_key_arn` variable
+- Resolved `tfsec` warnings
+- Updated `name` module
+- Updated variables descriptions

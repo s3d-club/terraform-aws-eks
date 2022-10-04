@@ -7,7 +7,7 @@ locals {
 }
 
 module "name" {
-  source = "github.com/s3d-club/terraform-external-name?ref=v0.1.1"
+  source = "github.com/s3d-club/terraform-external-name?ref=v0.1.2"
 
   context = var.name_prefix
   path    = path.module
@@ -20,10 +20,27 @@ resource "aws_eks_cluster" "this" {
   version  = var.cluster_version
   tags     = module.name.tags
 
+  enabled_cluster_log_types = [
+    "api",
+    "audit",
+    "authenticator",
+    "controllerManager",
+    "scheduler",
+  ]
+
+  encryption_config {
+    resources = ["secrets"]
+
+    provider {
+      key_arn = var.kms_key_arn
+    }
+  }
+
   vpc_config {
-    security_group_ids  = [var.security_group_id]
-    subnet_ids          = var.subnet_ids
-    public_access_cidrs = var.cidrs
+    endpoint_public_access = false
+    public_access_cidrs    = var.cidrs
+    security_group_ids     = [var.security_group_id]
+    subnet_ids             = var.subnet_ids
   }
 }
 
