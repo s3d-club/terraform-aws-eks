@@ -10,3 +10,6 @@ Recently completed and planned work is tracked here.
 - Updated `aws` provider
 - Updated `name` module
 - Updated `time` provider
+
+## [0.1.6](.)
+- Updated `hashicorp/aws` provider
