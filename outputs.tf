@@ -1,17 +1,15 @@
 output "cluster" {
   value = aws_eks_cluster.this
 
-  description = <<-END
-		The EKS Cluster	
-		https://go.s3d.com/aws/eks#cluster
-		END	
+  description = <<-EOT
+    The EKS cluster.
+    EOT	
 }
 
 output "role" {
   value = aws_iam_role.this
 
-  description = <<-END
-		The IAM Role
-		https://go.s3d.com/aws/eks#role
-		END	
+  description = <<-EOT
+    The IAM Role.
+    EOT	
 }

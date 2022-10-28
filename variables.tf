@@ -2,8 +2,7 @@ variable "cidrs" {
   type = list(string)
 
   description = <<-END
-		CIDRS
-    https://go.s3d.club/tf/eks#cidrs
+    A list of addresses for `public_access_cidrs`.
     END
 }
 
@@ -12,8 +11,7 @@ variable "cluster_version" {
   type    = string
 
   description = <<-END
-		Cluster Version
-    https://go.s3d.club/tf/eks#cluster_version
+    The EKS cluster version.
     END
 }
 
@@ -21,8 +19,7 @@ variable "kms_key_arn" {
   type = string
 
   description = <<-END
-		KMS ARN
-    https://go.s3d.club/tf/eks#kms_key_arn
+    The KMS ARN.
     END
 }
 
@@ -30,8 +27,7 @@ variable "name_prefix" {
   type = string
 
   description = <<-END
-		Name Prefix
-    https://go.s3d.club/tf/eks#name_prefix
+    A name prefix for resources.
     END
 }
 
@@ -39,8 +35,7 @@ variable "security_group_id" {
   type = string
 
   description = <<-END
-		Security Group ID
-    https://go.s3d.club/tf/eks#security_group_id
+    The Security Group ID for the cluster.
     END
 }
 
@@ -48,8 +43,7 @@ variable "subnet_ids" {
   type = list(string)
 
   description = <<-END
-		Subnet IDs
-    https://go.s3d.club/tf/eks#subnet_ids
+    A list of subnet IDs for the cluster.
     END
 }
 
@@ -58,7 +52,6 @@ variable "tags" {
   type    = map(string)
 
   description = <<-END
-		Tags for Resources
-    https://go.s3d.club/tf/eks#tags
+    Tags for resources.
     END
 }

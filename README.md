@@ -1,4 +1,5 @@
 # EKS Module
+A Terraform module for EKS configuration.
 
 ## Other Documents
 Please read our [LICENSE][lice], [CONTRIBUTING][cont], [CODE-OF-CONDUCT][code],
