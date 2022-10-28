@@ -1,21 +1,8 @@
 # Changes
 Recently completed and planned work is tracked here.
 
-## [0.0.0](.) [0.1.4](.)
+## [0.0.0](.) [0.1.8](.)
 - Created early versions
 
-## [0.1.5](.)
-- Fixed typo in `README.md`
-- Removed Darwin hashes from `.terraform.lock.hcl`
-- Updated `aws` provider
-- Updated `name` module
-- Updated `time` provider
-
-## [0.1.6](.)
-- Updated `hashicorp/aws` provider
-
-## [0.1.7](.)
-- Added `terraform.tf`
-
-## [0.1.8](.)
-- Updated `aws` provider
+## [0.1.9](.)
+- Removed dependency on `s3d-flow-json`
