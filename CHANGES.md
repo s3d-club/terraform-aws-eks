@@ -8,5 +8,5 @@ This file describes the project history as it relates to tagged versions.
 - Improved descriptions of variables and outputs
 - Updated modules and providers
 
-## [0.1.17](.) to [0.1.18](.)
-- Updated `aws` provider
+## [0.1.19](.)
+- Updated docs
