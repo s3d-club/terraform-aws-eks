@@ -3,7 +3,7 @@ output "cluster" {
 
   description = <<-EOT
     The EKS cluster.
-    EOT	
+    EOT  
 }
 
 output "role" {
@@ -11,5 +11,5 @@ output "role" {
 
   description = <<-EOT
     The IAM Role.
-    EOT	
+    EOT  
 }
